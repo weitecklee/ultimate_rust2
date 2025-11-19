@@ -15,8 +15,23 @@
 // - Document the "roundness" field, explaining that it is a percentage
 // - Document the "orangeness" field, explaining that it is a number from 8 to 27
 
+//! A pumpkin is a cultivated winter squash in the genus Cucurbita.
+//! The term is most commonly applied to round, orange-colored squash varieties,
+//! but does not possess a scientific definition. It may be used in reference to
+//! many different squashes of varied appearance and belonging to multiple
+//! species in the Cucurbita genus.
+//!
+//! ![Image of pumpkins](https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/FrenchMarketPumpkinsB.jpg/700px-FrenchMarketPumpkinsB.jpg)
+
+/// Big orange thing
+///
+/// # Recipes
+///
+/// Recipes will be coming soon.
 pub struct Pumpkin {
+    /// Roundness as percentage
     pub roundness: f32,
+    /// Orangeness on a scale from 8 to 27
     pub orangeness: i32,
 }
 
@@ -24,16 +39,22 @@ pub struct Pumpkin {
 // can't be used for pie. :'-(
 
 impl Pumpkin {
+    /// If you smash the pumpkin, it will be gone.
+    /// Then it can't be used for pie.
+    /// 😭
     pub fn smash(self) {}
 }
 
 // 5. Document that BURNT_ORANGE is for the "orangeness" field in the Pumpkin struct.
 // - Link to the Pumpkin struct in your description
 
+/// for `orangeness` field in [`Pumpkin`] struct.
 pub const BURNT_ORANGE: i32 = 13;
 
 // Challenge: Find the option to pass to `cargo doc` so that documentation for this private item
 // gets generated as well.  Hint: `cargo doc -h` will show you all the relevant options.
+
+// cargo doc --no-deps --open --document-private-items
 
 /// For internal use only. In fact, this documentation is so private that it won't be generated.
 /// At least not by default. But if you pass the correct option in, it will magically appear!
