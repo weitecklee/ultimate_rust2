@@ -5,6 +5,12 @@ edition = "2021"
 
 [dependencies]
 
+[dev-dependencies]
+criterion = { version = "0.3", features = ["html_reports"] }
+
+[[bench]]
+name = "sploosh_speed"
+harness = false
 
 # Challenge Help 1: If you choose to take on the challenge, you'll need to add `criterion` as a
 # development dependency. Here is one way to do it:
