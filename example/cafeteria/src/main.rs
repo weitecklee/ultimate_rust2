@@ -37,7 +37,7 @@ fn main() {
     let alice_handle = thread::spawn(|| cafeteria_worker("alice", orders_rx2, lunches_tx2));
     let zack_handle = thread::spawn(|| cafeteria_worker("zack", orders_rx, lunches_tx));
 
-    for order in vec![
+    for order in [
         "polish dog",
         "caesar salad",
         "onion soup",
